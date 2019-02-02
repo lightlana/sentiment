@@ -1,1 +1,1 @@
-# sentiment
+# Emotions detection with tweets
