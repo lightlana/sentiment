@@ -9,12 +9,10 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 
-
-
-access_token = "1050094688408100865-121uWXPUP80LoV7nbi1bgbDueXOZb5"
-access_token_secret = "LgcvVcZ1HFVAPEDb83FdlbRi6qFhqMQyESdt0881vy3Sw"
-consumer_key = "OxdUkm2e77BcmhTgLXfpt4PJL"
-consumer_secret = "Gk9h2zuXQpWXhkM4sVejCECdLlwWlPRDTm9Besjonj9hTtMYjp"
+access_token = ""
+access_token_secret = ""
+consumer_key = ""
+consumer_secret = ""
 
 class StdOutListener(StreamListener):
 
@@ -32,4 +30,4 @@ if __name__ == '__main__':
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, l)
-    stream.filter(track=['eset', 'symantec', 'kaspersky', 'avast'])
+    stream.filter(track=['keyword1', 'keyword2', 'keyword3'])
